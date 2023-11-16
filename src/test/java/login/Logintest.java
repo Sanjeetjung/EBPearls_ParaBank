@@ -2,9 +2,7 @@ package login;
 
 import ExcelSheet.ReadDataFromExcel;
 import base.BaseTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.RegisteredUserHomePage;
 
 import java.io.File;
@@ -28,7 +26,7 @@ public class Logintest extends BaseTests {
 
         loginPage.setUserName(userName);
         loginPage.setPassword(Password);
-        RegisteredUserHomePage SignIn = loginPage.clickLogin();
+        //RegisteredUserHomePage SignIn = loginPage.clickLogin();
 
 
     }

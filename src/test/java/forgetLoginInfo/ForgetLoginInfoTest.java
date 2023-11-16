@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class ForgetLoginInfoTest extends BaseTests {
     @Test
-    public void ForgetLoginInfoTest() throws IOException {
+    public void forgetLoginInfoTest() throws IOException {
 
         ForgetLoginInfoPage forgetLoginInfoPage = loginPage.forgetLoginInfoPage();
         ReadDataFromExcel read_data_from_excel = new ReadDataFromExcel();

@@ -1,6 +1,5 @@
 package ExcelSheet;
 
-import org.apache.commons.io.output.BrokenWriter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -8,7 +7,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ReadDataFromExcel {
@@ -32,16 +30,12 @@ public class ReadDataFromExcel {
     }
 
     public String getCellValue(XSSFCell cell){
-        switch (cell.getCellType()){
-            case NUMERIC:
-                return String.valueOf(cell.getNumericCellValue());
-            case BOOLEAN:
-                return String.valueOf(cell.getBooleanCellValue());
-            case STRING:
-                return cell.getStringCellValue();
-            default:
-                return cell.getStringCellValue();
-        }
+        return switch (cell.getCellType()) {
+            case NUMERIC -> String.valueOf(cell.getNumericCellValue());
+            case BOOLEAN -> String.valueOf(cell.getBooleanCellValue());
+            case STRING -> cell.getStringCellValue();
+            default -> cell.getStringCellValue();
+        };
     }
 
 }
