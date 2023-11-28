@@ -3,7 +3,6 @@ package login;
 import ExcelSheet.ReadDataFromExcel;
 import base.BaseTests;
 import org.testng.annotations.Test;
-import pages.RegisteredUserHomePage;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +12,7 @@ public class Logintest extends BaseTests {
     public void testSuccessfullLogin() throws IOException {
         ReadDataFromExcel read_data_from_excel = new ReadDataFromExcel();
 
-        File file = new File("E:\\F\\EB Pearl\\ExcelSheetData.xlsx");
+        File file = new File("E:\\F\\EB_Pearl\\ExcelSheetData.xlsx");
         int sheetIndex = 1;
 
         String userName = read_data_from_excel.readDataFromExcel(file, sheetIndex, 2, 0);

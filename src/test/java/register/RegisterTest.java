@@ -17,7 +17,7 @@ public class RegisterTest extends BaseTests {
         ReadDataFromExcel read_data_from_excel = new ReadDataFromExcel();
 
 
-        File file = new File("E:\\F\\EB Pearl\\ExcelSheetData.xlsx");
+        File file = new File("E:\\F\\EB_Pearl\\ExcelSheetData.xlsx");
         int sheetIndex = 0;
 
         String FirstName = read_data_from_excel.readDataFromExcel(file, sheetIndex, 2, 0);

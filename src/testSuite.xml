@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite" >
+    <test name="ParaBank" >
+        <classes>
+            <class name="login.Logintest" />
+            <class name="register.RegisterTest" />
+            <class name="forgetLoginInfo.ForgetLoginInfoTest" />
+            <class name="menu.AboutUsTest" />
+            <class name="menu.AdminTest" />
+            <class name="menu.ContactUsTest" />
+            <class name="menu.ContactUsTest" />
+            <class name="menu.ProductsTest" />
+            <class name="menu.ServicesTest" />
+        </classes>
+    </test>
+</suite>
